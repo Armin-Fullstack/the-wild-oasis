@@ -1,5 +1,5 @@
-import Heading from "../ui/Heading";
-import Row from "../ui/Row";
+import Heading from "../styles/Heading";
+import Row from "../styles/Row";
 
 function Dashboard() {
   return (
