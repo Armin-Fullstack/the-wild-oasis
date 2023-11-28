@@ -21,7 +21,7 @@ export default function App() {
           <Route path="bookings" element={<Bookings />} />
           <Route path="cabins" element={<Cabins />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="user" element={<Users />} />
+          <Route path="users" element={<Users />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
 

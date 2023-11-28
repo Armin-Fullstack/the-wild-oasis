@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledLogo = styled.div`
   text-align: center;
+  margin-bottom: 3.2rem;
 `;
 
 const Img = styled.img`
@@ -12,7 +13,7 @@ const Img = styled.img`
 function Logo() {
   return (
     <StyledLogo>
-      <Img src="/logo-light.png" alt="Logo" />
+      <Img src="/public/img/logo-light.png" alt="Logo" />
     </StyledLogo>
   );
 }
