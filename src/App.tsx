@@ -9,9 +9,21 @@ import Users from "./pages/Users";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./ui/AppLayout";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 0,
+    },
+  },
+});
+
 export default function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
       <GlobalStyles />
       <Routes>
         <Route element={<AppLayout />}>
@@ -27,6 +39,6 @@ export default function App() {
 
         <Route path="login" element={<Login />} />
       </Routes>
-    </>
+    </QueryClientProvider>
   );
 }
